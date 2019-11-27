@@ -1,0 +1,7 @@
+alert tls any any -> any 443 (msg:"naver SNI"; tls_sni; content:"naver.com"; sid:1; rev:1;)
+alert tls any any -> any 443 (msg:"twitter SNI"; tls_sni; content:"twitter.com"; sid:2; rev:1;)
+alert tls any any -> any 443 (msg:"facebook SNI"; tls_sni; content:"facebook.com"; sid:3; rev:1;)
+alert tcp any any -> any 80 (msg:"test.gilgil.net"; content: "GET /"; content:"ost: test.gilgil.net"; sid:4; rev:1;)
+alert tcp any any -> any 80 (msg:"gilgil.net"; content: "GET /"; content:"Host: gilgil.net"; sid:5; rev:1;)
+alert tcp any any -> any 80 (msg:"www.gilgil.net"; content: "GET /"; content:"Host: www.gilgil.net"; sid:6; rev:1;)
+alert tcp any any -> any 80 (msg:"snoopspy.com"; content: "GET /"; content:"Host: snoopspy.com"; sid:7; rev:1;)
